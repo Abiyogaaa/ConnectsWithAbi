@@ -1,0 +1,331 @@
+ :root {
+        font-size: 62.5%;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-image: url("https://wallpaperaccess.com/full/2109958.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+      }
+
+      main {
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .container {
+        width: 28rem;
+        padding: 1rem 2rem;
+        background-color: rgba(255, 255, 255, 0.45);
+        border-radius: 2rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(1.5rem);
+        min-width: 25rem;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .image {
+        width: 40%;
+        height: auto;
+        border-radius: 5rem;
+        display: block;
+        margin: 1rem auto;
+        border: 0.2rem solid #27213b;
+        transition: transform 0.3s ease;
+      }
+
+      .image:hover {
+        transform: scale(1.1);
+      }
+
+      hr {
+        border: none;
+        height: 0.2rem;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #27213b,
+          transparent
+        );
+        margin: 1rem 0;
+      }
+
+      h1,
+      .occupation {
+        text-align: center;
+      }
+
+      h1 {
+        font-family: Muli, sans-serif;
+        font-weight: 700;
+        font-size: 2.3rem;
+      }
+
+      .occupation {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        font-family: "Space Mono", monospace;
+      }
+
+      .link-boxes {
+        margin: 2rem 1rem;
+        font-family: Muli, sans-serif;
+        font-weight: 700;
+        font-size: 1.4em;
+        text-transform: capitalize;
+      }
+
+      .link-boxes a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        color: #27213b;
+        border: 0.1rem solid #27213b;
+        text-align: center;
+        margin: 0.7rem;
+        border-radius: 0.5rem;
+        padding: 0.3rem;
+        transition: all 0.3s ease;
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+      }
+
+      .link-boxes a:hover {
+        transform: translateX(10px);
+        background-color: #f8923b;
+        border: 0.1rem solid #27213b;
+        cursor: pointer;
+      }
+
+      .icon {
+        font-size: 1.2em;
+      }
+
+      .location {
+        text-align: center;
+        margin: 0.7rem;
+        font-size: 1.2rem;
+        font-family: "Space Mono", monospace;
+      }
+
+      @media only screen and (min-width: 992px) {
+        .image {
+          width: 40%;
+        }
+        h1 {
+          font-size: 2.4rem;
+        }
+        .container {
+          width: 35rem;
+        }
+      }
+      .floating-text {
+        position: fixed;
+        font-family: "Space Mono", monospace;
+        font-size: 1.4rem;
+        pointer-events: none;
+        z-index: -1;
+        white-space: nowrap;
+        text-shadow: 0 0 5px currentColor;
+        opacity: 0.7;
+      }
+
+      .tech-html {
+        color: #e44d26;
+      }
+      .tech-css {
+        color: #264de4;
+      }
+      .tech-js {
+        color: #f0db4f;
+      }
+      .tech-react {
+        color: #61dafb;
+      }
+      .tech-node {
+        color: #68a063;
+      }
+      .tech-php {
+        color: #777bb3;
+      }
+      .tech-python {
+        color: #366b98;
+      }
+      .tech-java {
+        color: #e76f00;
+      }
+      .tech-mongo {
+        color: #4db33d;
+      }
+      .tech-aws {
+        color: #ff9900;
+      }
+
+      .left-text {
+        left: 0.5rem;
+        animation: floatLeft 12s infinite linear;
+      }
+
+      .right-text {
+        right: 0.5rem;
+        animation: floatRight 12s infinite linear;
+      }
+
+      @keyframes floatLeft {
+        0% {
+          transform: translateY(-100vh) rotate(-5deg);
+        }
+        100% {
+          transform: translateY(100vh) rotate(-5deg);
+        }
+      }
+
+      @keyframes floatRight {
+        0% {
+          transform: translateY(100vh) rotate(5deg);
+        }
+        100% {
+          transform: translateY(-100vh) rotate(5deg);
+        }
+      }
+
+      /* Glowing effect on hover for links */
+      .link-boxes a:hover {
+        transform: translateX(10px);
+        background-color: #f8923b;
+        border: 0.1rem solid #27213b;
+        cursor: pointer;
+        box-shadow: 0 0 15px #f8923b;
+      }
+
+      /* Mobile-first styles */
+      @media only screen and (max-width: 768px) {
+        .floating-text {
+          font-size: 1.2rem;
+        }
+
+        .left-text.secondary {
+          left: 8rem;
+        }
+
+        .right-text.secondary {
+          right: 8rem;
+        }
+      }
+
+      /* Tablet styles */
+      @media only screen and (min-width: 768px) {
+        .floating-text {
+          font-size: 1.6rem;
+        }
+
+        .left-text {
+          left: 2rem;
+        }
+
+        .right-text {
+          right: 2rem;
+        }
+
+        .left-text.secondary {
+          left: 12rem;
+        }
+
+        .right-text.secondary {
+          right: 12rem;
+        }
+      }
+
+      /* Desktop styles */
+      @media only screen and (min-width: 992px) {
+        .floating-text {
+          font-size: 2rem;
+        }
+
+        .left-text {
+          left: 5rem;
+        }
+
+        .right-text {
+          right: 5rem;
+        }
+
+        .left-text.secondary {
+          left: 15rem;
+        }
+
+        .right-text.secondary {
+          right: 15rem;
+        }
+      }
+      .typing-text {
+        overflow: hidden;
+        border-right: 0.15em solid #27213b;
+        white-space: nowrap;
+        margin: 0 auto;
+        animation: typing 3.5s steps(30, end),
+          blink-caret 0.75s step-end infinite;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes typing {
+        0% {
+          width: 0;
+        }
+        50% {
+          width: 100%;
+        }
+        70% {
+          width: 100%;
+        }
+        80% {
+          width: 0;
+        }
+        100% {
+          width: 0;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #27213b;
+        }
+      }
+
+      .occupation {
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        font-family: "Space Mono", monospace;
+        display: flex;
+        justify-content: center;
+        min-height: 2.4rem; /* Prevent layout shift */
+      }
