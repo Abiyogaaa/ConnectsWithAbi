@@ -49,9 +49,10 @@
       }
 
       .image {
-        width: 40%;
-        height: auto;
-        border-radius: 5rem;
+        width: 12rem;  /* Fixed width instead of percentage */
+        height: 12rem; /* Same as width to maintain 1:1 aspect ratio */
+        border-radius: 50%; /* Makes it perfectly circular */
+        object-fit: cover; /* Ensures image fills circle without distortion */
         display: block;
         margin: 1rem auto;
         border: 0.2rem solid #27213b;
